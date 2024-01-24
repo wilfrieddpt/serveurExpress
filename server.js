@@ -5,17 +5,17 @@ const Diacritics = require('diacritics');
 
 const app = express();
 const server = http.createServer(app);
+const { Server } = require('ws');
 const wss = new Server({ server });
 
 const User = require('./table/user'); // Importe le modèle User depuis le fichier existant
 const Room = require('./table/room'); // Importe le modèle Room depuis le fichier existant
 const userParty = require('./table/userParty'); // Importe le modèle userParty depuis le fichier existant
 const bannedWords = require('./bannedWords');
-const { send } = require('process');
+//const { send } = require('process');
 
 const gameChats = {};
 app.use(express.json());
-
 
 
 
